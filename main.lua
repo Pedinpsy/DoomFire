@@ -66,16 +66,16 @@ function updateTemeper(fire)
 		for j  = 0, width-1,1 do 
 				--print(i,j,fire[i+1][j])
 			if (fire[i+1][j] ~=37 or fire[i+1][j] <1  ) then
-					decay = love.math.random( 1, 2 )/10.0
+					decay = love.math.random( 1, 4 )/10.0
 				if(fire[i+1][j] - decay >= 0 ) then 
 					fire[i][j] = fire[i+1][j] - decay
 				end
 				coin = love.math.random(0,10)
-				if(coin>5) then
-					if(fire[i+1][j] - decay >= 0 ) then 
-						fire[i][j-1] = fire[i+1][j] - decay
-					end
-				end
+				--if(coin>5) then
+					--if(fire[i+1][j] - decay >= 0 ) then 
+					--	fire[i][j-1] = fire[i+1][j] - decay
+					--end
+				--end
 
 			end
 		end
